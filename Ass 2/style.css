@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body{
+    height: 100%;
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    height: 90%;
+    width: 90%;
+    display: flex;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(red, green, blue, alpha);
+}
+.left{
+    width: 60%;
+    background: #f7c600;
+    padding: 50px 70px;
+    position: relative;
+}
+.logo{
+    width: 120px;
+}
+.content{
+    margin-top: 120px;
+}
+.content h4{
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+.content h1{
+    font-size: 110px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.content p{
+    width: 60%;
+    line-height: 1.7;
+    font-size: 22px;
+}
+.count{
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    gap: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+.line{
+    width: 60px;
+    height: 3px;
+    background: black;
+}
+.right {
+    width: 40%;
+    background: #f5e9c9;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.pikachu{
+    width: 500px;
+    position: absolute;
+    left: -180px;
+
+}
+.menu{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    font-size: 40px;
+    cursor: pointer;
+}
+.dots{
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.dots span{
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: #f2c400;
+    border-radius: 50%;
+}
+.dots .active{
+    background: black;
+}
