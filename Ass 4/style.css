@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero-section {
+  width: 100%;
+  height: 100vh;
+  background: url(./background.png) center/cover;
+  clip-path: ellipse(100% 100% at 50% 0%);
+  position: relative;
+}
+
+
+.hero {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 70vh;
+  bottom: 0;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+}
+
+.logo {
+  height: 120px;
+  padding-top: 20px;
+}
+
+nav {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  color: whitesmoke;
+  font-size: small;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.insta {
+  color: whitesmoke;
+  font-size: x-large;
+}
+
+.fill {
+  color: rgb(74, 70, 70);
+  background: whitesmoke;
+  padding: 2px;
+  border-radius: 25%;
+  margin-right: 2px;
+}
+
+.hero-text {
+  color: whitesmoke;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: larger;
+  font-weight: 600;
+}
+
+.left-top {
+
+  align-self: flex-start;
+}
+
+.hero-middle-text {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  /* gap: 20%;  */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 600;
+  font-size: 70px;
+}
+
+.right-bottom {
+  align-self: flex-end;
+}
+
+button {
+  font-size: small;
+  font-weight: bold;
+  letter-spacing: 2px;
+  background: url("./image.png");
+  position: absolute;
+  background-size: cover;
+  padding: 20px 61px;
+  background-position: top;
+  border: none;
+  border-radius: 6px;
+  filter: brightness(1.2);
+  left: 50%;
+  top: 65%;
+  transform: translateX(-50%);
+}
+
+.bottom-section {
+  margin-top: -10%;
+  height: auto;
+  background: url(./background2.png);
+  color: whitesmoke;
+}
+
+
+.bottom-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15%;
+  width: 70%;
+  margin: auto;
+}
+
+h2{
+  font-family:'Courier New', Courier, monospace;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+.line-image {
+  margin:-50px 0 ;
+  height: 150px;
+  width: 100%;
+}
+.data{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  color: rgb(162, 161, 166);
+  font-size: medium;
+}
+.data-block{
+  padding: 30px;
+}
