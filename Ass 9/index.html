@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Productivity Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== DASHBOARD HOME ===== -->
+  <div id="dashboard">
+
+    <!-- Top Bar -->
+    <header class="top-bar">
+      <div id="datetime-widget">
+        <span id="current-date"></span>
+        <span id="current-time"></span>
+      </div>
+      <h1 class="app-title">My Dashboard</h1>
+      <div class="top-actions">
+        <div id="weather-mini">
+          <span id="weather-temp">--°C</span>
+          <span id="weather-desc">--</span>
+        </div>
+        <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+      </div>
+    </header>
+
+    <!-- Feature Cards Grid -->
+    <main class="cards-grid">
+      <div class="card" data-feature="todo">
+        <div class="card-icon">✅</div>
+        <h2>Todo List</h2>
+        <p>Manage your tasks</p>
+      </div>
+      <div class="card" data-feature="planner">
+        <div class="card-icon">📅</div>
+        <h2>Daily Planner</h2>
+        <p>Plan your day hour by hour</p>
+      </div>
+      <div class="card" data-feature="goals">
+        <div class="card-icon">🎯</div>
+        <h2>Daily Goals</h2>
+        <p>Set and track daily goals</p>
+      </div>
+      <div class="card" data-feature="pomodoro">
+        <div class="card-icon">⏱️</div>
+        <h2>Pomodoro Timer</h2>
+        <p>Stay focused with timed sessions</p>
+      </div>
+      <div class="card" data-feature="quote">
+        <div class="card-icon">💬</div>
+        <h2>Motivation</h2>
+        <p>Get an inspirational quote</p>
+      </div>
+      <div class="card" data-feature="weather">
+        <div class="card-icon">🌤️</div>
+        <h2>Weather</h2>
+        <p>Check current conditions</p>
+      </div>
+    </main>
+  </div>
+
+  <!-- ===== FEATURE VIEW WRAPPER ===== -->
+  <div id="feature-view" class="hidden">
+
+    <!-- Back Button -->
+    <button id="back-btn" class="back-btn">← Back to Dashboard</button>
+
+    <!-- ===== TODO LIST ===== -->
+    <section id="feature-todo" class="feature-section hidden">
+      <h2>✅ Todo List</h2>
+      <div class="todo-input-row">
+        <input type="text" id="todo-input" placeholder="Add a new task..." />
+        <button id="todo-add-btn">Add Task</button>
+      </div>
+      <ul id="todo-list"></ul>
+    </section>
+
+    <!-- ===== DAILY PLANNER ===== -->
+    <section id="feature-planner" class="feature-section hidden">
+      <h2>📅 Daily Planner</h2>
+      <div id="planner-slots"></div>
+    </section>
+
+    <!-- ===== DAILY GOALS ===== -->
+    <section id="feature-goals" class="feature-section hidden">
+      <h2>🎯 Daily Goals</h2>
+      <div class="goals-input-row">
+        <input type="text" id="goals-input" placeholder="Add a new goal..." />
+        <button id="goals-add-btn">Add Goal</button>
+      </div>
+      <p id="goals-progress">0 of 0 completed</p>
+      <ul id="goals-list"></ul>
+    </section>
+
+    <!-- ===== POMODORO TIMER ===== -->
+    <section id="feature-pomodoro" class="feature-section hidden">
+      <h2>⏱️ Pomodoro Timer</h2>
+      <p id="session-label" class="session-label">Work Session</p>
+      <div id="timer-display" class="timer-display">25:00</div>
+      <div class="timer-controls">
+        <button id="timer-start">Start</button>
+        <button id="timer-pause">Pause</button>
+        <button id="timer-reset">Reset</button>
+      </div>
+    </section>
+
+    <!-- ===== MOTIVATION QUOTE ===== -->
+    <section id="feature-quote" class="feature-section hidden">
+      <h2>💬 Motivation Quote</h2>
+      <div class="quote-card">
+        <p id="quote-text">Click below to get inspired!</p>
+        <p id="quote-author"></p>
+      </div>
+      <button id="new-quote-btn">New Quote</button>
+    </section>
+
+    <!-- ===== WEATHER WIDGET ===== -->
+    <section id="feature-weather" class="feature-section hidden">
+      <h2>🌤️ Weather</h2>
+      <div class="weather-card">
+        <div id="weather-location" class="weather-location">Fetching location...</div>
+        <div id="weather-temperature" class="weather-temperature">--°C</div>
+        <div id="weather-condition" class="weather-condition">--</div>
+        <div class="weather-details">
+          <span>💧 Humidity: <span id="weather-humidity">--%</span></span>
+          <span>💨 Wind: <span id="weather-wind">-- km/h</span></span>
+        </div>
+      </div>
+      <button id="weather-refresh-btn">Refresh Weather</button>
+    </section>
+
+  </div><!-- /feature-view -->
+
+  <script src="script.js"></script>
+</body>
+</html>
